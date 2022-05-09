@@ -11,16 +11,12 @@ function getSomeData() {
     ];
 }
 
+
 server.get('/', (req, res) => {
     console.log('I received a request!');
     res.send("<h1>Hello world!</h1><p>Here is a paragraph</p>");
 });
 
-
-// [GET]    /             (Hello World endpoint)
-server.get('/', (req, res) => {
-    res.end();
-});
 
 // [GET]    /api/dogs     (R of CRUD, fetch all dogs)
 server.get('/api/dogs', (req, res) => {
