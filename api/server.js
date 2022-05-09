@@ -1,4 +1,6 @@
-// IMPORTS AT THE TOP
+const express = require("express"); // "CommonJS"
+
+const server = express();
 
 // INSTANCE OF EXPRESS APP
 
@@ -13,4 +15,4 @@
 // [PUT]    /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
 
-// EXPOSING THE SERVER TO OTHER MODULES
+module.exports = server;

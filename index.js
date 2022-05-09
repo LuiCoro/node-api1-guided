@@ -1,9 +1,5 @@
-const express = require("express"); // "CommonJS"
-
-const server = express();
+const server = require('./api/server');
 
 server.listen(9000, () => {
     console.log('server is now running');
 });
-
-module.exports = server;
