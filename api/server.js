@@ -17,10 +17,34 @@ server.get('/', (req, res) => {
 });
 
 // [GET]    /             (Hello World endpoint)
+server.get('/', (req, res) => {
+    res.end();
+});
+
 // [GET]    /api/dogs     (R of CRUD, fetch all dogs)
+server.get('/api/dogs', (req, res) => {
+    res.end();
+});
+
 // [GET]    /api/dogs/:id (R of CRUD, fetch dog by :id)
+server.get('/api/dogs/:id', (req, res) => {
+    res.end();
+});
+
 // [POST]   /api/dogs     (C of CRUD, create new dog from JSON payload)
+server.post('/api/dogs', (req, res) => {
+    res.end();
+});
+
 // [PUT]    /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
+server.put('/api/dogs/:id', (req, res) => {
+    res.end();
+});
+
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
+server.delete('/api/dogs/:id', (req, res) => {
+    res.end();
+});
+
 
 module.exports = server;
