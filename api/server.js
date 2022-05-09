@@ -32,7 +32,7 @@ server.get('/api/dogs/:id', (req, res) => {
 server.post('/api/dogs', (req, res) => {
     Dog.create(req.body)
         .then(result => {
-            res.json(result);
+            res.status(201).json(result);
         })
 });
 
