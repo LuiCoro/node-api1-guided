@@ -13,7 +13,7 @@ function getSomeData() {
 
 server.get('/', (req, res) => {
     console.log('I received a request!');
-    res.send(JSON.stringify(getSomeData()));
+    res.send("<h1>Hello world!</h1><p>Here is a paragraph</p>");
 });
 
 // [GET]    /             (Hello World endpoint)
