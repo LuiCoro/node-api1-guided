@@ -4,9 +4,16 @@ const server = express();
 
 // GLOBAL MIDDLEWARE
 
+
+function getSomeData() {
+    return [
+        1, 2, 3, 4, 5, 6, 7, 8
+    ];
+}
+
 server.get('/', (req, res) => {
     console.log('I received a request!');
-    res.send("hello!");
+    res.send(JSON.stringify(getSomeData()));
 });
 
 // [GET]    /             (Hello World endpoint)
