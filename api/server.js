@@ -16,6 +16,7 @@ server.get('/', (req, res) => {
     res.send("<h1>Hello world!</h1><p>Here is a paragraph</p>");
 });
 
+
 // [GET]    /             (Hello World endpoint)
 server.get('/', (req, res) => {
     res.end();
