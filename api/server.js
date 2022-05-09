@@ -2,11 +2,11 @@ const express = require("express"); // "CommonJS"
 
 const server = express();
 
-// INSTANCE OF EXPRESS APP
-
 // GLOBAL MIDDLEWARE
 
-// ENDPOINTS
+server.get('/', () => {
+    console.log('I received a request!');
+});
 
 // [GET]    /             (Hello World endpoint)
 // [GET]    /api/dogs     (R of CRUD, fetch all dogs)
