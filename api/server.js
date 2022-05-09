@@ -3,7 +3,7 @@ const Dog = require('./dog-model');
 
 const server = express();
 
-// server.use(express.json());
+server.use(express.json());
 
 server.get('/', (req, res) => {
     console.log('I received a request!');
@@ -30,8 +30,7 @@ server.get('/api/dogs/:id', (req, res) => {
 
 // [POST]   /api/dogs     (C of CRUD, create new dog from JSON payload)
 server.post('/api/dogs', (req, res) => {
-    req.body
-    res.end();
+    res.json(req.body);
 });
 
 // [PUT]    /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
