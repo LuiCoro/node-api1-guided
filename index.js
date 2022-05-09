@@ -1,4 +1,4 @@
-const { x } = require("y"); // "CommonJS"
+const express = require("express"); // "CommonJS"
 
 x();
 
