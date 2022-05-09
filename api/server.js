@@ -38,7 +38,10 @@ server.post('/api/dogs', (req, res) => {
 
 // [PUT]    /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
 server.put('/api/dogs/:id', (req, res) => {
-    res.end();
+    Dog.update(req.params.id, req.body)
+    .then(result => {
+        res.json(result);
+    })
 });
 
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
