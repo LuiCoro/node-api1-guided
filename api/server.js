@@ -17,7 +17,7 @@ server.get('/api/dogs', (req, res) => {
     Dog.findAll()
         .then(result => {
             res.json(result);
-        })
+        });
 });
 
 // [GET]    /api/dogs/:id (R of CRUD, fetch dog by :id)
