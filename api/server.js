@@ -1,15 +1,9 @@
-const express = require("express"); // "CommonJS"
+const express = require('express'); // "CommonJS"
+const Dog = require('./dog-model');
 
 const server = express();
 
 // GLOBAL MIDDLEWARE
-
-
-function getSomeData() {
-    return [
-        1, 2, 3, 4, 5, 6, 7, 8
-    ];
-}
 
 
 server.get('/', (req, res) => {
