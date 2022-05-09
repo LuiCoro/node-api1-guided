@@ -3,8 +3,7 @@ const Dog = require('./dog-model');
 
 const server = express();
 
-// GLOBAL MIDDLEWARE
-
+// server.use(express.json());
 
 server.get('/', (req, res) => {
     console.log('I received a request!');
@@ -31,6 +30,7 @@ server.get('/api/dogs/:id', (req, res) => {
 
 // [POST]   /api/dogs     (C of CRUD, create new dog from JSON payload)
 server.post('/api/dogs', (req, res) => {
+    req.body
     res.end();
 });
 
