@@ -1,5 +1,5 @@
 const express = require("express"); // "CommonJS"
 
-x();
+const server = express();
 
-console.log('Hello, world!');
+server.listen();
