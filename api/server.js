@@ -4,8 +4,9 @@ const server = express();
 
 // GLOBAL MIDDLEWARE
 
-server.get('/', () => {
+server.get('/', (req, res) => {
     console.log('I received a request!');
+    res.send("hello!");
 });
 
 // [GET]    /             (Hello World endpoint)
