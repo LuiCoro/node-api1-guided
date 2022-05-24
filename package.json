@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/LuiCoro/node-api1-guided#readme",
   "devDependencies": {
+    "eslint": "^8.16.0",
     "nodemon": "^2.0.16"
   }
 }
