@@ -5,6 +5,7 @@ const express = require('express')
 const server = express()
 
 // GLOBAL MIDDLEWARE
+server.use(express.json())
 
 // ENDPOINTS
 server.get('/hello', (req, res) => {
