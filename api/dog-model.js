@@ -19,7 +19,7 @@ module.exports = {
 
   async create({ name, weight }) {
     // INSERT INTO dogs (id, name, weight) VALUES ('xyz', 'Foo', 10);
-    const newDog = { id: getId(), name, weight }
+    const newDog = { id: shortid.generate(), name, weight }
     dogs.push(newDog)
     return newDog
   },
