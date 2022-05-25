@@ -1,12 +1,8 @@
-let id = 0
-
-function getId() {
-  return ++id
-}
+const shortid = require('shortid')
 
 let dogs = [
-  { id: getId(), name: 'Captain', weight: 25 },
-  { id: getId(), name: 'Doggo', weight: 13 },
+  { id: shortid.generate(), name: 'Captain', weight: 25},
+  { id: shortid.generate(), name: 'Doggo', weight: 13}
 ]
 
 module.exports = {
