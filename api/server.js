@@ -31,7 +31,7 @@ server.get('/api/dogs', async (req, res) => {
     res.status(500)
     .json({
       // Sends back an error message along with the actual error
-      message: 'Something bad occured!',
+      message: 'An error occured!',
       error: err.message,
     })
   }
