@@ -11,31 +11,30 @@ const server = express()
 server.use(express.json())
 
 // ENDPOINTS
-server.get('/hello', (req, res) => {
-  res.json({message: 'Hello!'})
+server.get('/', (req, res) => {
+  res.json({message: 'Hello from the server!'})
 })
 
+// now a GET request using async/await
+server.get('/api/dogs', async (req, res) => {
+  try {
+    // Pulls all dogs from the database
+    const dogs = await Dog.findAll()
 
-server.get('/api/dogs' , (req, res) => {
+    // Want to see the error message uncomment the next line
+    throw new Error('foo')
 
-  // Pulls all dogs from the database
-  Dog.findAll()
-  
-  // Because its a promise we have to use .then() & .catch()
-  .then(dogs => {
-    //  We use the dogs as an argument to send the dogs back to the client
-    // use throw new Error('foo') to test the catch block
-    // new Error('foo')
+    // Sends back the dogs to the client as a response
     res.json(dogs)
-  })
-  .catch(err => {
+  } catch (err) {
+    // If there is an error, send back a 500 status code
     res.status(500)
-    .json({ 
-      message: 'Something bad occured!'
+    .json({
+      // Sends back an error message along with the actual error
+      message: 'Something bad occured!',
       error: err.message,
     })
-  })
-  
+  }
 })
 
 // [GET]    /api/dogs     (R of CRUD, fetch all dogs)
